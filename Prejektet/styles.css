@@ -1,0 +1,1376 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --clr-dark: #0b0f19;
+    --clr-primary: #6366f1;
+    --clr-gray: #9397ad;
+    --clr-white: #ffffff; 
+
+
+    --container-padding: 1rem;
+
+}
+
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode header {
+    background-color: #1e1e1e; /* Dark header background */
+}
+
+.dark-mode .container, .dark-mode .container1, .dark-mode .container2, .dark-mode .container3, .dark-mode .container4, .dark-mode .container6, .dark-mode .container7 {
+    background-color: #1e1e1e; /* Dark background for containers */
+}
+
+/* Add any other styles to adjust elements in dark mode */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-right: 10px; /* Avstånd mellan logotyp och navbar */
+}
+
+#logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.switch {
+    display: flex;
+    align-items: center; /* Ser till att texten och knappen är vertikalt centrerade */
+    gap: 10px; /* Lägger till ett avstånd mellan texten och knappen */
+}
+
+.switch p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.switch .slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #007bff;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+#sign {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#sign i {
+    margin-right: 10px;
+}
+
+#sign:hover {
+    background-color: #0056b3;
+}
+
+.btn-mobile {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-mobile i {
+    color: #333;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 3rem;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.content {
+    margin-left: 3rem;
+}
+
+.text-section {
+    text-align: center;
+    margin-top: 3rem;
+    padding-left: 2rem;
+}
+
+
+.image-container {
+    height: 100%;
+}
+
+.image-section {
+    width: 80%;
+    height: auto;
+    padding-top: 3rem;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-rund {
+    display: flex;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-white {
+    background-color: var(--clr-white);
+
+}
+
+
+.read-more {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 100px;
+    
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 3rem;
+    gap: 1rem;
+    place-items: center;
+    background-color: var(--clr-white);
+}
+
+.logos {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 1rem;
+    place-items: center;
+
+}
+
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.iphone-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snett-iphone img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5rem;
+}
+
+.grid-container {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+
+
+.grid-item {
+    
+    padding: 20px;
+    border-radius: 10px;
+    
+    text-align: left;
+}
+
+.grid-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 30px; /* Adjust size of the images */
+    height: auto;
+    margin-right: 10px;
+}
+
+.grid-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.carusel-section {
+    text-align: center;
+    padding-block: 4rem;
+}
+
+.carusel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.history {
+    margin-top: 4rem;
+
+}
+
+.space {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+.mobile-first, .tablet  {
+    display: none;
+}
+
+ 
+.faq {
+    display: none;
+}
+
+
+
+
+.container3 {
+    display: flex;
+    justify-content: space-between; /* Ger utrymme mellan vänster och höger sida */
+    padding: 20px; /* Justera efter behov */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    
+}
+
+.left-side, .right-side {
+    flex: 1; /* Gör så att båda sidorna tar upp lika mycket plats */
+    margin: 10px;
+    margin-bottom: 5rem;
+    overflow: hidden; /* Lägger till lite marginal mellan sidorna */
+}
+
+.left-content, .right-content {
+    margin-bottom: 20px; /* Lägger till utrymme mellan innehållet */
+}
+
+
+.learn-more {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 10px 20px;
+    border-radius: 10%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.right-side {
+    margin-bottom: 3rem;
+}
+
+.container4 {
+    display: none;
+}
+
+.container5 {
+    display: none;
+}
+
+
+.container6 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Mellanrum mellan kolumner */
+}
+
+.left-column, .right-column {
+    flex: 1; /* Båda kolumner får lika stor plats */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Mellanrum mellan sektionerna */
+}
+
+.subscribe-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.faq-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .faq-iteam {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  
+  .faq-iteam h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    display: inline-block;
+  }
+  
+  .faq-iteam i {
+    float: right;
+    color: #555;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-iteam1 i {
+    display: none;
+    float: right;
+    color: #555;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-iteam p {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  .faq-iteam1 p {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+    text-align: start;
+  }
+
+  .faq-iteam:first-child p {
+    display: block;
+    text-align: start;
+  }
+  
+  .faq-iteam.active p {
+    display: block;
+  }
+  
+  .faq-iteam.active i {
+    transform: rotate(180deg);
+  }
+  
+  /* Hover effect */
+  .faq-iteam:hover h3 {
+    color: #007BFF;
+  }
+
+  .faq-iteam i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #e0e0e0; /* Ljusgrå färg */
+    color: #333; /* Mörkare färg för ikonen */
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .faq-iteam.active i {
+    background-color: #d0d0d0; /* Mörkare grå när aktiv */
+    transform: rotate(180deg);
+  }
+  
+  /* Hover-effekt för ikonen */
+  .faq-iteam:hover i {
+    background-color: #c0c0c0; /* Lite mörkare ljusgrå vid hover */
+  }
+
+  #down {
+    display: none;
+ }
+
+
+ .faq-iteam3 p {
+    display: block;
+    text-align: start;
+  }
+
+  .faq-iteam1 p {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+    text-align: start;
+  }
+
+  .container5 {
+    display: flex;
+    justify-content: space-between; /* Ger utrymme mellan vänster och höger sida */
+    padding: 20px; /* Justera efter behov */
+    align-items: center;
+    max-width: 1200px;
+    gap: 20px;
+    
+  
+ }
+
+ .subscribe-box {
+    width: 450px;
+    background-color: #F4F6FC;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+  }
+  
+  .icon-text-container {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .subscribe-box .icon {
+    width: 80px;
+  }
+  
+  .subscribe-box h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .input-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .subscribe-box input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 200px;
+  }
+  
+  .subscribe-box button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .subscribe-box button:hover {
+    background-color: #4C51BF;
+  }
+  
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 5rem;
+    border: 1px solid rgb(228, 225, 225);
+    box-shadow: var(--clr-white);
+  }
+
+
+
+
+
+
+/* Mobil (mindre än 768px) */
+@media (max-width: 768px) {
+    header {
+        flex: 1;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .container {
+        justify-content: space-between;
+    
+    }
+
+    .container3 {
+        display: none;
+    }
+
+    .container4 {
+        display: none;
+    }
+
+    .container6 {
+        display: none;
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+    .btn-mobile {
+        display: block;
+    }
+
+    #sign {
+        display: none;
+    }
+
+    .phones {
+        flex-direction: column;
+    }
+
+    .phone {
+        display: none; /* Dölj telefonbilden */
+    }
+
+    .image-section {
+        display: none; /* Dölj bildsektionen */
+    }
+
+    .text-section {
+        margin-top: 100px; /* Skapa utrymme under den fasta headern */
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Lägg knapparna ovanför varandra */
+        gap: 20px; /* Öka mellanrum mellan knapparna */
+        align-items: stretch; /* Låter knapparna sträcka sig över hela skärmen */
+        width: 100%; /* Säkerställer att knapparna tar upp hela bredden */
+        
+    }
+
+    .buttons a {
+        width: 100%; /* Gör knapparna 100% breda på mobil */
+        text-align: center; /* Centrera texten inuti knapparna */
+        padding: 10px; /* Lägger till mer padding för större touch-ytor */
+        font-size: 18px; /* Gör texten lite större på knapparna */
+        border-radius: 8px; /* Rundade hörn för ett mjukare utseende */
+        
+    }
+
+   
+
+    .btn-rund {
+        display: flex;
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+    .btn-white {
+        background-color: var(--clr-white);
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .app-store-btn {
+        background-color: var(--clr-dark); /* App Store-knappens bakgrundsfärg */
+        color: #fff;
+        
+    }
+
+    .google-play-btn {
+        background-color: var(--clr-dark); /* Google Play-knappens bakgrundsfärg */
+        color: #fff;
+    }
+
+    .read-more a {
+        background-color: var(--clr-white); /* Bakgrundsfärg för "Discover more" */
+        color: var(--clr-dark);
+        width: 40px;
+        border-radius: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+ 
+    
+    .read-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .logo-container {
+        display: none;
+    }
+    
+    .snett-iphone {
+        display: none;
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        
+    }
+    .grid-container {
+        grid-template-columns: 1fr; 
+        
+    }
+
+    .snett-iphone img {
+        transform: none; /* Removes tilt on smaller screens */
+        max-width: 100%;
+    }
+
+    .carusel-item1, .carusel-item3 {
+        display: none;
+    }
+
+    .tablet, .history {
+        display: none;
+    }
+    
+    .mobile-first {
+        margin-top: 4rem;
+        display: block;
+    }
+
+    .faq {
+        display: block;
+        background-color: #f9f9f9;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+      }
+      
+      .faq h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      
+      .faq p {
+        text-align: center;
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      
+      .faq-main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      
+      .faq-container {
+        max-width: 800px;
+        width: 100%;
+      }
+      
+      .faq-iteam {
+        border-bottom: 1px solid #ddd;
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      
+      .faq-iteam h3 {
+        font-size: 20px;
+        color: #333;
+        margin: 0;
+        display: inline-block;
+      }
+      
+      .faq-iteam i {
+        float: right;
+        color: #555;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+      
+      .faq-iteam p {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+      }
+
+      .faq-iteam3 p {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+        text-align: start;
+      }
+
+      .faq-iteam:first-child p {
+        display: block;
+        text-align: start;
+      }
+      
+      .faq-iteam.active p {
+        display: block;
+      }
+      
+      .faq-iteam.active i {
+        transform: rotate(180deg);
+      }
+      
+      /* Hover effect */
+      .faq-iteam:hover h3 {
+        color: #007BFF;
+      }
+
+      .faq-iteam i {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #e0e0e0; /* Ljusgrå färg */
+        color: #333; /* Mörkare färg för ikonen */
+        font-size: 18px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      
+      .faq-iteam.active i {
+        background-color: #d0d0d0; /* Mörkare grå när aktiv */
+        transform: rotate(180deg);
+      }
+      
+      /* Hover-effekt för ikonen */
+      .faq-iteam:hover i {
+        background-color: #c0c0c0; /* Lite mörkare ljusgrå vid hover */
+      }
+
+      .contact-us {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+        padding: 10px 15px;
+        border-radius: 10%;
+        position: absolute;
+        left: 33%;
+        margin-top: 1rem;
+      }
+
+      #up {
+        display: none;
+      }
+
+      .container5 {
+        display: flex;
+        justify-content: space-between; /* Ger utrymme mellan vänster och höger sida */
+        padding: 20px; /* Justera efter behov */
+        align-items: center;
+        max-width: 1200px;
+        gap: 20px;
+        
+      
+     }
+
+     .subscribe-box {
+        width: 450px;
+        background-color: #F4F6FC;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+      }
+      
+      .icon-text-container {
+        display: flex;
+        align-items: center;
+        text-align: start;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .subscribe-box .icon {
+        width: 80px;
+      }
+      
+      .subscribe-box h2 {
+        font-size: 25px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+      }
+      
+      .input-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+      .subscribe-box input[type="email"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 200px;
+      }
+      
+      .subscribe-box button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #5A67D8;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .subscribe-box button:hover {
+        background-color: #4C51BF;
+      }
+      
+
+      
+
+}
+
+/* Tablet (768px till 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+   
+    .image-section {
+        
+        display: block;
+        width: 40%; /* Anpassa bredden för tablet */
+        height: 80%;
+        padding-top: 3rem;
+        object-fit: contain; /* Anpassa bildens proportioner */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-content: space-between;
+        margin-right: 2rem;
+    }
+
+
+    .container {
+        position: relative;
+        
+    }
+    .container3 {
+        display: none;
+    }
+
+    .container6 {
+        display: none;
+    }
+
+
+    .l-content {
+        width: 60%;
+        flex-direction: row;
+        text-align: center;
+        margin-top: 3rem;
+        
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row; /* Lägger knapparna sida vid sida */
+        justify-content: center;
+    
+        margin-left: 1rem;
+        
+    }
+
+   
+    .buttons a {
+        flex: 1; /* Låter knapparna automatiskt anpassa sin bredd */
+        padding: 2px; /* Lägger till mer utrymme inuti knapparna */
+        text-align: center; /* Centrerar texten i knapparna */
+        border-radius: 8px;
+    }
+
+    .btn-mobile {
+        margin-right: 2rem;
+    }
+
+    .text-section {
+        margin-top: 3rem; /* Anpassa avståndet under headern i tablet-läge */
+    }
+
+    #sign {
+        display: none;
+    }
+
+    .btn-mobile {
+        display: block;
+    }
+
+    .btn-rund {
+        display: flex;
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn-white {
+        background-color: var(--clr-white);
+        
+    }
+    
+    .read-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 60px;
+        
+    }
+
+    
+    .logo-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Adjusts number of columns based on screen size */
+        grid-gap: 20px; /* Adds spacing between logos */
+        justify-items: center; /* Centers the logos */
+        align-items: center;
+        place-items: center;
+        margin: 2rem; /* Space around the logo container */
+    }
+
+    .logos img {
+        max-width: 150px; /* Ensures logos don't shrink too much */
+        height: auto;
+    }
+
+    /* Fixing the image section of the iPhone */
+    .image-section {
+        max-width: 400px; /* Ensures the iPhone image does not shrink too much */
+        margin: 0 auto; /* Centers the image on smaller screens */
+        display: block;
+        padding-top: 2rem;
+    }
+
+    .logos:nth-last-of-type(-n+2) {
+        display: none;
+    }
+
+    .snett-iphone {
+        display: none;
+    }
+
+    .iphone-container {
+        display: none;
+    }
+
+    .mobile-first, .history {
+        display: none;
+    }
+
+    .tablet {
+        margin-top: 4rem;
+        display: block;
+    }
+
+    .faq {
+        display: block;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      
+      .faq p {
+        text-align: center;
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      
+      .faq-main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      
+      .faq-container {
+        max-width: 800px;
+        width: 100%;
+      }
+      
+      .faq-iteam {
+        border-bottom: 1px solid #ddd;
+        padding: 20px 0;
+        cursor: pointer;
+      }
+      
+      .faq-iteam h3 {
+        font-size: 20px;
+        color: #333;
+        margin: 0;
+        display: inline-block;
+      }
+      
+      .faq-iteam i {
+        float: right;
+        color: #555;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-iteam1 i {
+        display: none;
+        float: right;
+        color: #555;
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+      
+      .faq-iteam p {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+      }
+
+      .faq-iteam1 p {
+        display: none;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+        text-align: start;
+      }
+
+      .faq-iteam:first-child p {
+        display: block;
+        text-align: start;
+      }
+      
+      .faq-iteam.active p {
+        display: block;
+      }
+      
+      .faq-iteam.active i {
+        transform: rotate(180deg);
+      }
+      
+      /* Hover effect */
+      .faq-iteam:hover h3 {
+        color: #007BFF;
+      }
+
+      .faq-iteam i {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #e0e0e0; /* Ljusgrå färg */
+        color: #333; /* Mörkare färg för ikonen */
+        font-size: 18px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      
+      .faq-iteam.active i {
+        background-color: #d0d0d0; /* Mörkare grå när aktiv */
+        transform: rotate(180deg);
+      }
+      
+      /* Hover-effekt för ikonen */
+      .faq-iteam:hover i {
+        background-color: #c0c0c0; /* Lite mörkare ljusgrå vid hover */
+      }
+
+      .contact-us {
+        display: none;
+      }
+
+      .faq-iteam:first-child p {
+        display: none;
+      }
+
+      .faq-iteam3 p {
+        display: block;
+        text-align: start;
+      }
+
+     #down {
+        display: none;
+     }
+
+
+     .container4 {
+        display: flex;
+        margin-left: 3rem;
+     }
+
+     .call{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Ger utrymme mellan vänster och höger sida */
+        padding: 20px; /* Justera efter behov */
+        align-items: center;
+        max-width: 1200px;
+        gap: 20px;
+        text-align: center;
+     }
+
+
+     .container5 {
+        display: flex;
+        justify-content: space-between; /* Ger utrymme mellan vänster och höger sida */
+        padding: 20px; /* Justera efter behov */
+        align-items: center;
+        max-width: 1200px;
+        gap: 20px;
+        
+      
+     }
+
+     .subscribe-box {
+        width: 450px;
+        background-color: #F4F6FC;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+      }
+      
+      .icon-text-container {
+        display: flex;
+        align-items: center;
+        text-align: start;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .subscribe-box .icon {
+        width: 80px;
+      }
+      
+      .subscribe-box h2 {
+        font-size: 25px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+      }
+      
+      .input-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+      .subscribe-box input[type="email"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 200px;
+      }
+      
+      .subscribe-box button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #5A67D8;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .subscribe-box button:hover {
+        background-color: #4C51BF;
+      }
+      
+
+
+    @media (min-width: 1024px) {
+        .image-section {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 500px; /* Increases size on larger screens */
+        }
+
+        
+    }
+
+        
+    
+
+}
